@@ -3263,12 +3263,13 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}</div></div>` : ``} `;
 });
+const logo = "/_app/immutable/assets/penta-agora.5f6595e4.png";
 let darkmodebtn = "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-lg p-2.5 z-50";
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<header><nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"><div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"><div class="flex items-center">${validate_component(Avatar, "Avatar").$$render(
     $$result,
     {
-      src: "./src/img/penta-agora.png",
+      src: logo,
       border: true,
       size: "md",
       class: "mr-3 ring-red-100"
@@ -3340,7 +3341,7 @@ const Comp = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$rendered = `<div>${validate_component(Card, "Card").$$render(
       $$result,
       {
-        img: "./src/img/" + ImgComp,
+        img: ImgComp,
         horizontal: true,
         class: "mb-4 h-64"
       },
@@ -3370,7 +3371,7 @@ const Comp = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       },
       {
         default: () => {
-          return `<div class="relative mt-2"><div class="flex justify-center items-center"><img src="${"./src/img/" + escape(ImgComp, true)}" alt="" class="max-w-md rounded-md"></div> <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">${escape(TitleComp)}</h1></div> <h2 class="italic text-3xl indent-0.5">“${escape(QuoteComp)}”</h2> <!-- HTML_TAG_START -->${TextComp}<!-- HTML_TAG_END --> <div class="flex justify-end">${validate_component(GradientButton, "GradientButton").$$render($$result, { color: BtnColorComp }, {}, {
+          return `<div class="relative mt-2"><div class="flex justify-center items-center"><img${add_attribute("src", ImgComp, 0)} alt="" class="max-w-md rounded-md"></div> <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">${escape(TitleComp)}</h1></div> <h2 class="italic text-3xl indent-0.5">“${escape(QuoteComp)}”</h2> <!-- HTML_TAG_START -->${TextComp}<!-- HTML_TAG_END --> <div class="flex justify-end">${validate_component(GradientButton, "GradientButton").$$render($$result, { color: BtnColorComp }, {}, {
             default: () => {
               return `Sluiten`;
             }
@@ -3381,8 +3382,10 @@ const Comp = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   } while (!$$settled);
   return $$rendered;
 });
+const imgUrlMens = "/_app/immutable/assets/mens.560f4230.png";
+const imgUrlMicheal = "/_app/immutable/assets/micheal.c03bf285.png";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="container px-5 pt-5 pb-14 mx-auto font-lato text-lg">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="flex justify-center items-center mb-20"><div class="grid gap-3 grid-cols-1 lg:grid-cols-2">${validate_component(Comp, "Comp").$$render($$result, { ImgComp: "mens.png" }, {}, {})} ${validate_component(Comp, "Comp").$$render($$result, { ImgComp: "micheal.png" }, {}, {})}</div></main></div>`;
+  return `<div class="container px-5 pt-5 pb-14 mx-auto font-lato text-lg">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="flex justify-center items-center mb-20"><div class="grid gap-3 grid-cols-1 lg:grid-cols-2">${validate_component(Comp, "Comp").$$render($$result, { ImgComp: imgUrlMens }, {}, {})} ${validate_component(Comp, "Comp").$$render($$result, { ImgComp: imgUrlMicheal }, {}, {})}</div></main></div>`;
 });
 export {
   Page as default
