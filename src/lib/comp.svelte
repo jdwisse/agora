@@ -2,7 +2,7 @@
   // @ts-nocheck
 
   import { Modal, Card, Button, GradientButton } from "flowbite-svelte";
-  import { ArrowRightOutline } from "flowbite-svelte-icons";
+  import { ArrowRightOutline, FileImportOutline } from "flowbite-svelte-icons";
   let ModalName = false;
   export let ImgComp;
   let TitleComp = "Mens";
@@ -13,7 +13,7 @@
 </script>
 
 <div>
-  <Card img="./src/img/{ImgComp}" horizontal class="mb-4 h-64">
+  <Card img={ImgComp} horizontal class="mb-4 h-64">
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-600 dark:text-gray-400"
     >
@@ -37,7 +37,7 @@
 <Modal title="" bind:open={ModalName} autoclose outsideclose>
   <div class="relative mt-2">
     <div class="flex justify-center items-center">
-      <img src="./src/img/{ImgComp}" alt="" class="max-w-md rounded-md" />
+      <img src={ImgComp} alt="" class="max-w-md rounded-md" />
     </div>
     <h1
       class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]"
