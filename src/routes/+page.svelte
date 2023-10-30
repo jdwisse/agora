@@ -100,7 +100,7 @@
         </p>
         <p>Ik vind het zeer waardevol dat de coaches bij Agora ruim de tijd krijgen aan het begin en einde van de dag zodat je van elkaar kan leren.</p>
         "
-        BtnColorComp="purple"
+        BtnColorComp="red"
       />
       <Comp
         ImgComp={imgUrlEinstein}
